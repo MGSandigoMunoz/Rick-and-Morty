@@ -1,0 +1,24 @@
+.login-container {
+    /* display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height:100%;
+    background-color: rgba(254, 254, 254, 0.404); /* Fondo semi-transparente */
+    /* padding: 50px;
+    margin:200px auto;
+    text-align: center;  */ 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  width: 80%;
+  height: 50vh; /* Usar el % de la altura del viewport */
+  background-color:rgb(255, 199, 234, 0.55); /* Fondo semi-transparente */
+  padding: 30px;
+  margin: 0 auto; /* Centrar horizontalmente en el contenedor principal */
+  text-align: center;
+  border-radius: 100px
+  }
+
