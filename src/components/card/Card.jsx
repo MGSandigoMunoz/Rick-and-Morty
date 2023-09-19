@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import styles from "./Card.module.css";
+import styles from './Card.module.css';
 import { addFav, removeFav } from "../../redux/actions";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
@@ -40,7 +40,7 @@ useEffect(() => {
   return(
 
 
-      <div className={styles.container}>
+      <div className={styles.card}>
 
         {/* BOTÓN DE FAVORITO */}
         {isFav ? (
@@ -48,16 +48,25 @@ useEffect(() => {
             ) : (
             <button onClick={handleFavorite}>🤍</button>
         )}
-        
+         
           
           <button onClick={() => props.onClose(props.id)}>X</button>
+          
+          <div className={styles.cardsContainer}>
 
-          <h2><NavLink to={`/detail/${props.id}`}>{props.name}</NavLink></h2>
-          <h2>{props.status}</h2>
-          <h2>{props.species}</h2>
-          <h2>{props.gender}</h2>
-          <h2>{props.origin}</h2>
-          <img src={props.image} alt={props.name}/>   
+            <div className={styles.descripcion}>  
+                <h2><NavLink to={`/detail/${props.id}`}>{props.name}</NavLink></h2>
+                <hr/>
+                <h2>{props.status}</h2>
+                <h2>{props.species}</h2>
+                <h2>{props.gender}</h2>
+                <h2>{props.origin}</h2> 
+            </div>
+            <img src={props.image} alt={props.name}/>   
+
+          </div>
+          
+          
 
       </div>
    );

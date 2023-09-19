@@ -9,7 +9,7 @@ import Detail from './components/detail/Detail.jsx';
 import Form from './components/form/Form.jsx';
 import Favorites from './components/favorites/Favorites.jsx';
 
-import './App.css';
+import styles from './App.module.css'
 
 
 function App() {
@@ -75,10 +75,10 @@ function App() {
 
 
    return (
-      <div className='App'>
+      <div className={styles.body}>
         
         
-        {location.pathname !== "/" && <Nav onSearch={onSearch} className="nav" />}
+        {location.pathname !== "/" && <Nav onSearch={onSearch}/>}
 
         {/* //Renderizado condicional de barra de navegación para que aparezca en todas las páginas, menos en el path "/"  */}
 

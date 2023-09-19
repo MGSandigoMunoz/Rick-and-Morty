@@ -1,0 +1,16 @@
+.body {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex; /* Usa un contenedor flexible */
+  flex-direction: column; /* Alinea los elementos verticalmente */
+  justify-content: center; /* Centra verticalmente los elementos */
+  align-items: center; /* Centra horizontalmente los elementos */
+  min-width: 320px;
+  min-height: 89vh;
+  background-image: url("https://rare-gallery.com/thumbs/345116-Rick-and-Morty-Cartoon-TV-Series-Rick-Sanchez-Morty-Smith-Spaceship.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
