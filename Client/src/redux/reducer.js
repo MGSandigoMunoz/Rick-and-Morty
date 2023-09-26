@@ -9,26 +9,20 @@ export default function reducer (state = initialState, {type,payload}){
 //*action={ type,payload}
 
     switch (type) {
+
+    //?CONEXIÓN CON BACK
         case ADD_FAV:
-            let copy1=[...state.allCharacters,payload]
-            
-            return {
-                ...state,//Copia de todas las props del estado.
-                allCharacters: copy1, //Agrego personajes el allCharacters para tener disponibles todos los personajes. Es una copia a my Favorites sobre la que haré todos los filtrados
-                myFavorites: copy1,
-            }
-        
+            return { ...state,
+                 myFavorites: payload,
+                 allCharacters: payload
+                 };
+
+    //?CONEXIÓN CON BACK
         case REMOVE_FAV:
-            return {
-                ...state,//Copia de todas las props del estado, aunque en este momento sólo esta el objeto myFavorite
-
-                myFavorites: state.myFavorites.filter( char => char.id !== Number(payload)),
-
-                allCharacters:state.allCharacters.filter( char => char.id !== Number(payload)),
-
-                
-                //Retorna array sólo con los favoritos que no tengan el id que entra por payload. Elimina el char con el id ingresado. Debo convertir lo que retorna payload a number, porque viene como string que tomamos de URL
-            }
+            return { ...state,
+                 myFavorites: payload 
+                }; //Retorna array sólo con los favoritos que no tengan el id que entra por payload. Elimina el char con el id ingresado. Debo convertir lo que retorna payload a number, porque viene como string que tomamos de URL
+            
         case FILTER:
             if(payload === "All")return{//Si selecciona todos los personajes, entonces muestra todos los que están en favoritos
                 ...state,
