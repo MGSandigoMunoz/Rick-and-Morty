@@ -1,24 +1,45 @@
 const axios= require("axios");
-const URL="https://rickandmortyapi.com/api/character/"
 
-const getCharById = (req,res) => {
 
-    const {id}=req.params;//id recibido por parámetros
+const getCharById = async (req,res) => {
 
-    axios.get(URL+id) //Devuelve promesa
-    .then(({data}) => {
-        const {id, status, name, species, origin, image, gender} = data;
+    const charId =req.params.id;//string
+    const URL=`https://rickandmortyapi.com/api/character/${charId}`
+    try {
+        const {data} = await axios.get(URL)
+        const {id, status, name, species, origin, image, gender} = data;//id es un Number
         const character ={id, status, name, species, origin, image, gender};
 
-        character.name //Me pregunto por cualquiera de las props
-        ? res.status(200).json(character) //Si existe el personaje
-        : res.status(404).send("Not found")//Si no existe el personaje
-    })
-    .catch(error => res.status(500).send(error.message)); //Si rompe todo
-    
+        // character.name 
+        // ? 
+        res.status(200).json(character) //Si existe el personaje
+        // : res.status(404).send("Not found")//Si no existe el personaje
+
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
 }
 
 module.exports = getCharById;
+
+
+//! PROMISES
+    // const {id}=req.params;//id recibido por parámetros
+
+    // axios.get(URL+id) //Devuelve promesa
+    // .then(({data}) => {
+    //     const {id, status, name, species, origin, image, gender} = data;
+    //     const character ={id, status, name, species, origin, image, gender};
+
+    //     character.name //Me pregunto por cualquiera de las props
+    //     ? res.status(200).json(character) //Si existe el personaje
+    //     : res.status(404).send("Not found")//Si no existe el personaje
+    // })
+    // .catch(error => res.status(500).send(error.message)); //Si rompe todo
+// }
+
+// module.exports = getCharById;
+    
 
 //!VANILLA
 // const axios = require("axios");
