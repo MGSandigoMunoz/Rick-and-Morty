@@ -1,8 +1,10 @@
-import {ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./action-types";
+import {ADD_FAV, REMOVE_FAV, FILTER, ORDER, ERROR } from "./action-types";
 
 const initialState = {
     myFavorites:[],//En este array guardo personajes en forma de objetos
-    allCharacters:[]
+    allCharacters:[],
+    user:"",
+    errors:false
 }
 
 export default function reducer (state = initialState, {type,payload}){
@@ -20,7 +22,8 @@ export default function reducer (state = initialState, {type,payload}){
     //?CONEXIÓN CON BACK
         case REMOVE_FAV:
             return { ...state,
-                 myFavorites: payload 
+                 myFavorites: payload,
+                 allCharacters: payload
                 }; //Retorna array sólo con los favoritos que no tengan el id que entra por payload. Elimina el char con el id ingresado. Debo convertir lo que retorna payload a number, porque viene como string que tomamos de URL
             
         case FILTER:
@@ -48,7 +51,14 @@ export default function reducer (state = initialState, {type,payload}){
                 return {
                     ...state,
                     myFavorites:copy3
-                };            
+                };    
+            case ERROR :
+                return{
+                     ...state,
+                     errors:payload
+                }
+               
+
 
         default:
             return {...state}

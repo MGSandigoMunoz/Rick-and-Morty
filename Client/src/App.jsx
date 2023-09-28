@@ -19,12 +19,12 @@ function App() {
 
    const EMAIL = "mgabrielasm0119@gmail.com"
    const PASSWORD= "123456"
-   
 
+ //!API REQUEST FRONT
    /*const onSearch = (data)=>{
       setCharacters([...characters, example])
-      }*/
-
+   }*/
+   
    /*function onSearch(id) {
        axios(`https://rickandmortyapi.com/api/character/${id}`)
        .then(({ data }) => {//De toda la info que recibo, sólo me importa data, por eso se desestructura
@@ -35,21 +35,34 @@ function App() {
          }
       });
    }*/
-
+   //!API REQUEST WITH ASYNC AWAY
    
-   function onSearch(id) {
-   axios.get(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
-         if (data.id) {
-         if(!characters.some((character) => character.id === data.id)) {
-         setCharacters((prevCharacters)=> [...prevCharacters, data]) 
-      } else {
-             window.alert('Este personaje ya esta en la lista') } }
-             else {
-               window.alert('No hay personajes con este ID!')
-             }
-            })
-            .catch(()=> alert("Hubo un error al cargar los datos de la API."))
-         }
+   async function onSearch(id){
+      const charById = characters.filter(char => char.id === Number (id));
+      if(charById.length) return alert("The character already exists!")
+      try {
+   const {data} = await axios.get(`http://localhost:3001/rickandmorty/character/${id}`);
+   setCharacters((oldchars) =>[...oldchars,data]) ;
+} catch (error) {
+   alert(error)
+         
+}
+}
+
+//!API REQUEST WITH PROMISES
+// function onSearch(id) {
+   // axios.get(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
+      //       if (data.id) {
+   //       if(!characters.some((character) => character.id === data.id)) {
+   //       setCharacters((prevCharacters)=> [...prevCharacters, data]) 
+   //    } else {
+   //           window.alert('Este personaje ya esta en la lista') } }
+   //           else {
+   //             window.alert('No hay personajes con este ID!')
+   //           }
+   //          })
+   //          .catch(()=> alert("Hubo un error al cargar los datos de la API."))
+   //       }
 
    const onClose= (id) =>{
     setCharacters(characters.filter( char => char.id !== Number(id)))  //Filtra personajes con id diferente al que tenemos
@@ -57,14 +70,33 @@ function App() {
 
    const navigate = useNavigate();
 
-   function login(userData) {
+   //! LOGIN ASYNC AWAY
+   async function login(userData) {
+
+      try {
+
       const { email, password } = userData;
       const URL = 'http://localhost:3001/rickandmorty/login/';
-      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
-         const { access } = data;
-         setAccess(data);
-         access && navigate('/home');
-      });
+      const {data} = await axios(URL +`?email=${email}&password=${password}`)
+
+      setAccess(data.access);
+
+      data.access && navigate('/home');
+
+      if(!data.access) alert("!ACCESS DENIED")
+      
+      } catch (error) {
+         console.log(error);
+      }
+
+   //! LOGIN WITH PROMISES
+      // const { email, password } = userData;
+      // const URL = 'http://localhost:3001/rickandmorty/login/';
+      // axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+      //    const { access } = data;
+      //    setAccess(data);
+      //    access && navigate('/home');
+      // });
    }
 
 //! FRONT LOGIN
@@ -77,6 +109,8 @@ function App() {
 
    // App.js
    // eslint-disable-next-line
+
+
    useEffect(() => {
       !access && navigate('/');/// ingreso con log
        // eslint-disable-next-line
