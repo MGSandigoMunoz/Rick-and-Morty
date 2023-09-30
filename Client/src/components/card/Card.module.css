@@ -1,25 +1,55 @@
 /* Estilos para los cards de personajes */
-.card {
+
+
+
+/* .card {
     background-color: rgba(114, 92, 114, 0.8);
     border: 1px solid #ddd;
     border-radius: 10%;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-    font-family: "Calibri", sans-serif;
-    display:block
-  }
+    padding: 50px;
+    margin:50px;
+    align-items: center;
+    text-align:right;
+    line-height: normal;
+    /* font-family: "Calibri", sans-serif; */
+    /* display:block;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px; */
+  /*} */
 
 
-  .descripcion {
-    font-family: Arial, sans-serif; /* Cambia el tipo de letra */
-    text-align:center; /* Justifica el texto */
-    color: rgb(214, 142, 189); /* Cambia el color del texto a azul */
+  .card {
+    width: 325px; 
+    height: 700px;  
+    background-color: rgba(114, 92, 114, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 10%;
+    padding: 20px; /* Ajusta el espacio de relleno según tu contenido */
+    margin: 50px;
+    align-items: center;
+    text-align: left;
+    line-height: normal;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+    display: block;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px,
+      rgba(240, 46, 170, 0.3) 10px 10px,
+      rgba(240, 46, 170, 0.2) 15px 15px,
+      rgba(240, 46, 170, 0.1) 20px 20px,
+      rgba(240, 46, 170, 0.05) 25px 25px;
   }
+  
 
-  .cardsContainer {
-    display: flex; /* Muestra las tarjetas en una fila */
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente fila si no caben en el ancho del contenedor */
-    gap: 20px; /* Espacio horizontal entre las tarjetas (ajusta según tus necesidades) */
-  }
+
+
+  /* .cardsContainer {
+    padding: inherit;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px; 
+    justify-content: space-between; 
+    display: inline-block;
+    margin-right: 10px;
+  }  */
   

@@ -1,0 +1,13 @@
+.searchBar{
+    border-radius: 100px;
+    height: 50%;
+    margin: px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hr{
+    border-color:lightcoral;
+    margin:10px
+}
+

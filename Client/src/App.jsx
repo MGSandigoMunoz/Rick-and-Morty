@@ -120,7 +120,7 @@ function App() {
 
 
    return (
-      <div className={styles.body}>
+      <div>
         
         
         {location.pathname !== "/" && <Nav onSearch={onSearch}/>}

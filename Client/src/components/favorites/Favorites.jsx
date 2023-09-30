@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux"; // Importa useDispatch
 
 import Card from "../card/Card";
 
+import styles from './Favorites.module.css'
+
 function Favorites({ myFavorites, onClose }) {
 
   const [aux, setAux] = useState(false);
@@ -23,12 +25,12 @@ function Favorites({ myFavorites, onClose }) {
   }
 
   return (
-    <div>
+    <div >
       <select onChange={handleOrder}>
         <option value="A">Ascendente</option>
         <option value="D">Descendente</option>
       </select>
-
+      
       <select onChange={handleFilter}>
       <option value="All">All</option>
         <option value="Male">Male</option>
@@ -36,6 +38,8 @@ function Favorites({ myFavorites, onClose }) {
         <option value="Genderless">Genderless</option>
         <option value="unknown">unknown</option>
       </select>
+
+    <div className={styles.FavoritesContainer} >
 
       {myFavorites.map((character) => (
         <Card
@@ -51,6 +55,7 @@ function Favorites({ myFavorites, onClose }) {
         />
       ))}
       
+    </div>
     </div>
   );
 }

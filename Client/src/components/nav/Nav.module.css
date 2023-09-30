@@ -1,0 +1,12 @@
+.searchBar{
+    padding: 10px;
+    border: 1px solid rgba(97, 10, 219, 0.432);
+    /* margin: 10px 300px; */
+    display: flex;
+    background: radial-gradient(circle, rgba(148, 63, 251, 0.438) 50%, rgba(252, 83, 117, 0.455) 100%);
+    justify-content:center;
+    flex-wrap: wrap;
+    border-radius: 1%;
+    z-index: 1000; 
+}
+

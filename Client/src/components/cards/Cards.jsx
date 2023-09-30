@@ -1,10 +1,11 @@
 import Card from '../card/Card';
 
-import './Cards.css';//Importo archivo css
+import styles from './Cards.module.css';
 
 export default function Cards({characters,onClose}) {//characters es un arreglo con los personajes.La envía app
    return (
-   <div className='cards'>
+   
+      <div className={styles.cardsContainer}> 
       {characters.map((character)=>(
          <Card 
             key = {character.id}
@@ -18,7 +19,7 @@ export default function Cards({characters,onClose}) {//characters es un arreglo 
             id = {character.id}
          />
       ))}
-   </div>
+      </div>
    );
 }
 

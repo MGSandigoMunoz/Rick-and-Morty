@@ -1,5 +1,7 @@
 import React from "react";
 
+import styles from './SearchBar.module.css'
+
 
 export default function SearchBar(props) {//Entra la función onSearch como props
    //props = {onSearch}
@@ -21,14 +23,18 @@ export default function SearchBar(props) {//Entra la función onSearch como prop
    return (
       <div>
          <input 
+            className={styles.searchBar}
             value={id}
             type="search"
             name="search"
             id = "search"
             onChange={handleChange}//Cada vez que el usuario hace un cambio se ejecuta la función
          />
+         
          <button onClick={handleClick}>Agregar</button> 
          {/* button recibe un callback de onSearch */}
+         <hr className={styles.hr}/>
+
       </div>
    );
 }

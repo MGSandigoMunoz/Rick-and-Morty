@@ -1,10 +1,12 @@
 import SearchBar from "../searchBar/SearchBar"
 import { NavLink } from "react-router-dom"
 
+import styles from './Nav.module.css'
+
 export default function Nav({onSearch}){
     
     return(
-        <div> 
+        <div className={styles.searchBar}>  
              <SearchBar onSearch={onSearch}/>
              
             <button>

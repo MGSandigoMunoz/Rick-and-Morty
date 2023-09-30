@@ -1,0 +1,30 @@
+.cards {
+    position: fixed; /* Fija el contenedor en la ventana del navegador */
+    top: 0; /* Coloca el contenedor en la parte superior del viewport */
+    left: 0; /* Coloca el contenedor en la parte izquierda del viewport */
+    width: 100%; /* Establece el ancho al 100% del viewport */
+    height: 100%; /* Establece la altura al 100% del viewport */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente (cambia según tus necesidades) */
+    z-index: 1000; /* Z-index para asegurarse de que esté por encima de otros elementos */ 
+}
+
+.cardsContainer {
+
+  display: flex;
+  flex-wrap: wrap; /* Permite que las Cards se envuelvan automáticamente cuando no caben en el ancho del contenedor */
+  justify-content: flex-start; /* Alinea las Cards a la izquierda */
+  gap: 10px; /* Espacio entre las Cards (ajusta según sea necesario) */
+        position: static; /* Fija el contenedor en la ventana del navegador */
+        top: auto;
+        left: 0; /* Coloca el contenedor en la parte izquierda del viewport */
+        width: 100%; /* Establece el ancho al 100% del viewport */
+        height: 100%; /* Establece la altura al 100% del viewport */
+        background-image: url("https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1826&q=80"); 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      
+
+
+
+  
