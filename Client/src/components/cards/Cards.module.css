@@ -19,10 +19,12 @@
         left: 0; /* Coloca el contenedor en la parte izquierda del viewport */
         width: 100%; /* Establece el ancho al 100% del viewport */
         height: 100%; /* Establece la altura al 100% del viewport */
-        background-image: url("https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1826&q=80"); 
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+       
       }
+.gif_nave{
+  width: 30%; /* Ancho de la imagen como el 50% del ancho del contenedor */
+  height: auto;
+}
       
 
 

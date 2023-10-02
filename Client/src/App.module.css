@@ -1,22 +1,23 @@
- /* body {
-  max-width: 1500px; 
-  margin: 0 auto;
-  padding: 2rem; 
-  text-align: center; 
-  display:flex; 
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center;
-  min-width: 320px;
-  min-height: 89vh;
-  background-image: url(  "https://www.xtrafondos.com/wallpapers/resized/rick-y-morty-paisaje-6534.jpg?s=large");
-  background-size:contain;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  body {
+     align-items:first baseline; /* Centra verticalmente */
+     justify-content: center; /* Centra horizontalmente */
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1px;
+     position:absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-image: url("https://www.xtrafondos.com/wallpapers/rick-y-morty-paisaje-6534.jpg");
+     background-repeat: no-repeat;
+     background-size: cover; /* Para asegurarse de que la imagen de fondo cubra todo el contenedor */
+     background-attachment: fixed;
+     opacity: 0.9;
 
  
 
-}  */
+}  
 /*Fondo azul home https://www.xtrafondos.com/wallpapers/resized/rick-y-morty-paisaje-6534.jpg?s=large*/
 
 /*Fondo error https://rare-gallery.com/thumbnail/391712-rick-and-morty-4k-pc-wallpaper.jpg */
