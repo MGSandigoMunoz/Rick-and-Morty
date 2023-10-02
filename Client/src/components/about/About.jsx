@@ -1,4 +1,4 @@
-import imagen from "./img/me-about.jpg";
+import imagen from "../../Img/me-about.jpg";
 import styles from './About.module.css';
 
 export default function About () {

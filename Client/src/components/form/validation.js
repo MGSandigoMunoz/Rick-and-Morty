@@ -13,7 +13,7 @@ export default function validation (input) {
             }
     
             if(!input.email){
-                error.email = "El nombre de usuario no puede estar vacío"
+                error.email = "El campo email no puede estar vacío"
             }
     
             if(input.email.length>35){
@@ -26,7 +26,7 @@ export default function validation (input) {
                 error.password= "Debe contener al menos un número"
             }
     
-            if(input.password.length < 6 || input.password > 10){
+            if(input.password.length <6 || input.password > 10){
                 error.password = "La contraseña debe tener entre 6 y 10 caracteres"
             }
                   

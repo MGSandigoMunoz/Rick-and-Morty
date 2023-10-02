@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import validation from "./validation.js";
+import imagen from "../../Img/giphy.gif"
 import './form.css';
 
 
@@ -46,39 +47,41 @@ export default function Form (props){
 
 
     return(
-    <div >
-        <form onSubmit={handleSubmit} className="login-container">
+    <div className="login-background">
 
-            <label>Email</label>
-                <input
-                    type="text"
-                    name="email"//Los nombres deben ser igual en los estados
-                    value= {userData.email}
-                    onChange={handleChange}
-                    placeholder="Ingrese su email..."
-                />
-                <p>{errors.email && errors.email}</p>
+        <img src={imagen} alt="Rick and Morty"/>
+            <form onSubmit={handleSubmit} className="login-container">
 
+                <label className="login-label">Email</label>
+                    <input
+                        type="text"
+                        name="email"//Los nombres deben ser igual en los estados
+                        value= {userData.email}
+                        onChange={handleChange}
+                        placeholder="Ingresa tu email..."
+                        className="login-input"
+                    />
             
+                <label className="login-label">Password</label>
+                    <input className="login-input"
+                    type="password"
+                    name="password"
+                    value= {userData.password}
+                    onChange={handleChange}
+                    placeholder="Ingresa tu contraseña..."
+                    />
+                    <p className="login-error" >{errors.email && errors.email}</p>
+                    
+                    <p className="login-error" >{errors.password && errors.password}</p>
+                    
+                <button 
+                type="submit"
+                disabel={errors.email || errors.password}
+                >Submit</button>
 
-            <br/>
-            <label>Password</label>
-                <input
-                type="password"
-                name="password"
-                value= {userData.password}
-                onChange={handleChange}
-                placeholder="Ingrese su contraseña..."
-                />
-                <p>{errors.password && errors.password}</p>
-
-            <button 
-            type="submit"
-            disabel={errors.email || errors.password}
-            >Submit</button>
-
-        </form>
-    </div>
+            </form>
+        
+    </div> 
     )
         
 }

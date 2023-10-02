@@ -1,24 +1,105 @@
 .login-container {
-    /* display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    height:100%;
-    background-color: rgba(254, 254, 254, 0.404); /* Fondo semi-transparente */
-    /* padding: 50px;
-    margin:200px auto;
-    text-align: center;  */ 
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center;
-  width: 80%;
-  height: 50vh; /* Usar el % de la altura del viewport */
-  background-color:rgb(255, 199, 234, 0.55); /* Fondo semi-transparente */
-  padding: 30px;
-  margin: 0 auto; /* Centrar horizontalmente en el contenedor principal */
-  text-align: center;
-  border-radius: 100px
+  width: 1000px; /* Ancho fijo del contenedor */
+  height: 25px; /* Altura fija del contenedor */
+  display: flex; /* Establece el contenedor como un contenedor flexible */
+  justify-content: space-between; /* Distribuye los elementos en la fila con espacio entre ellos */
+  align-items: center; /* Centra los elementos horizontalmente en el contenedor */
+  max-width: 1000px;
+  margin: 0 auto; /* Centra el contenedor en el eje horizontal */
+  background-color: #2b2f649a; /* Fondo semi-transparente para resaltar el contenido */
+  padding: 50px; /* Espacio interior para el contenido */
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.426);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.17) 10%, rgba(15, 56, 107, 0.23) 50%);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
+
+.login-background {
+    align-items:end; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://r4.wallpaperflare.com/wallpaper/1011/572/940/minimalism-the-moon-smith-cartoon-sanchez-hd-wallpaper-6f9b11847dc7aab15884a78267e2bcb3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Para asegurarse de que la imagen de fondo cubra todo el contenedor */
+    background-attachment: fixed;
+  }
+  
+  .login-input{
+    
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+   
+    padding: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width:40% ; 
+    width: 100%;
+    margin: 8px 20px;
+    display: inline-block;
+    border: 1px solid #49498e7c;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .login-label{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #9662c1;
+    font-weight: bold;
+  }
+
+  .login-errors{
+    text-align:justify;
+    display: flex;
+    flex-wrap: wrap;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#ffb6f4;
+  }
+
+  button {
+  
+    background-color:#5f408643;
+    font-size: 1em;
+    font-weight: 500;
+    padding:5px 50px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid transparent;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: #aa57b2;
+    outline-offset: 0px;
+    text-shadow: none;
+    -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+            transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    color:#ffa5f4;
+    outline-offset: 0px;
+    border-radius: 8px;
+    margin: 20px;
+  }
+      
+  button:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(211, 107, 194, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    outline-offset: 15px;
+    outline-color: rgba(149, 0, 255, 0.334);
+    text-shadow: 1px 1px 2px #7c7c6d;
+  }
+
+.add{
+  background-image: url("https://r4.wallpaperflare.com/wallpaper/1011/572/940/minimalism-the-moon-smith-cartoon-sanchez-hd-wallpaper-6f9b11847dc7aab15884a78267e2bcb3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Para asegurarse de que la imagen de fondo cubra todo el contenedor */
+    background-attachment: fixed;
+
+}
+
 
