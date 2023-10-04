@@ -25,37 +25,40 @@ function Favorites({ myFavorites, onClose }) {
   }
 
   return (
-    <div >
-      <select onChange={handleOrder}>
-        <option value="A">Ascendente</option>
-        <option value="D">Descendente</option>
-      </select>
-      
-      <select onChange={handleFilter}>
-      <option value="All">All</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Genderless">Genderless</option>
-        <option value="unknown">unknown</option>
-      </select>
+    <div className={styles.favoritebackground}>
+      <div >
+        <select className={styles.filter} onChange={handleOrder}>
+          <option value="A">Ascendente</option>
+          <option value="D">Descendente</option>
+        </select>
+        
+        <select className={styles.filter} onChange={handleFilter}>
+        <option value="All">All</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Genderless">Genderless</option>
+          <option value="unknown">unknown</option>
+        </select>
 
-    <div className={styles.FavoritesContainer} >
-
-      {myFavorites.map((character) => (
-        <Card
-          key={character.id}
-          name={character.name}
-          status={character.status}
-          species={character.species}
-          gender={character.gender}
-          origin={character.origin}
-          image={character.image}
-          onClose={() => onClose(character.id)}
-          id={character.id}
-        />
-      ))}
-      
-    </div>
+      <div  >
+      <div className={styles.cardsContainer}>
+        {myFavorites.map((character) => (
+          <Card
+            key={character.id}
+            name={character.name}
+            status={character.status}
+            species={character.species}
+            gender={character.gender}
+            origin={character.origin}
+            image={character.image}
+            onClose={() => onClose(character.id)}
+            id={character.id}
+          />
+        ))}
+        </div>
+        
+      </div>
+      </div>
     </div>
   );
 }

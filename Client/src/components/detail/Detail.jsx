@@ -22,6 +22,7 @@ export default function Detail() {
  }, [id]);
 
   return (
+   <div className={styles.background}>
    <div className={styles.cardContainer}>
    <div className={styles.card}>
      <h2 className={styles.descripcion}>Details</h2>
@@ -31,8 +32,9 @@ export default function Detail() {
      <h3 className={styles.descripcion}>Gender:{character.gender}</h3>
      <h3 className={styles.descripcion}>Origen:{character.origin?.name}</h3>
      {/*Se pregunta su character.origin existe?. Si existe trae la prop name, sino, no hacer nada */}
-     <img src={character.image} alt={character.name} />
+     <img className={styles.img} src={character.image} alt={character.name} />
    </div>
+ </div>
  </div>
   );
 

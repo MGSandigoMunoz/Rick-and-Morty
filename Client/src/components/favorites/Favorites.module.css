@@ -1,17 +1,41 @@
-.FavoritesContainer {
 
-    display: flex;
-    flex-wrap: wrap; /* Permite que las Cards se envuelvan automáticamente cuando no caben en el ancho del contenedor */
-    justify-content: flex-start; /* Alinea las Cards a la izquierda */
-    gap: 10px; /* Espacio entre las Cards (ajusta según sea necesario) */
-          position: static; /* Fija el contenedor en la ventana del navegador */
-          top: auto;
-          left: 0; /* Coloca el contenedor en la parte izquierda del viewport */
-          width: 100%; /* Establece el ancho al 100% del viewport */
-          height: 100%; /* Establece la altura al 100% del viewport */
-          background-image: url("https://s.yimg.com/uu/api/res/1.2/pE2TiWluYxmuRS3orRTLsA--~B/aD0xMDgwO3c9MTkyMDthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/hd/cp-video-transcode/production/6768ec5b-5d01-3ecc-ab25-2327bba5cc87/2023-09-27/17-04-40/b5981e0b-f527-50ad-99b9-e13916349731/stream_1920x1080x0_v2_3_0.jpg"); 
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-        }
+.favoritebackground {
+  justify-content: center; /* Centra horizontalmente */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  top: 115px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 615px;
+  background-image: url("https://wallpaperaccess.com/full/831749.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* Para asegurarse de que la imagen de fondo cubra todo el contenedor */
+  background-attachment: fixed;
+  opacity: 0.9;
+  min-height: 639px;
+}
 
-        /* Fondo que quiero https://s.yimg.com/uu/api/res/1.2/pE2TiWluYxmuRS3orRTLsA--~B/aD0xMDgwO3c9MTkyMDthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/hd/cp-video-transcode/production/6768ec5b-5d01-3ecc-ab25-2327bba5cc87/2023-09-27/17-04-40/b5981e0b-f527-50ad-99b9-e13916349731/stream_1920x1080x0_v2_3_0.jpg */
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  align-items: baseline;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  /* Agrega otros estilos específicos para tus tarjetas aquí */
+}
+
+.filter{
+  padding: 10px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#665d9f;
+  font-weight: 500;
+  font-size: 14px; 
+  border-radius: 4px;
+  margin: 0px 10px;
+}
+
+        

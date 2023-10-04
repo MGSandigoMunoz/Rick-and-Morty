@@ -18,12 +18,24 @@ export default function SearchBar(props) {//Entra la función onSearch como prop
       setId('')    
    }
 
+   const handleRandom = event => {
+
+      const min = 1; // Valor mínimo
+      const max = 826; // Valor máximo
+
+      // Generar un número aleatorio dentro del rango
+      const idAleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
+
+      event.preventDefault();//Para que no recarge la página
+      props.onSearch(idAleatorio);  
+   }
+
    //Para limpiar el input
 
    return (
       <div>
          <input 
-            className={styles.searchBar}
+            className={styles.input}
             value={id}
             type="search"
             name="search"
@@ -31,9 +43,9 @@ export default function SearchBar(props) {//Entra la función onSearch como prop
             onChange={handleChange}//Cada vez que el usuario hace un cambio se ejecuta la función
          />
          
-         <button onClick={handleClick}>Agregar</button> 
+         <button className={styles.button} onClick={handleClick}>Agregar</button> 
          {/* button recibe un callback de onSearch */}
-         <hr className={styles.hr}/>
+         <button className={styles.button} onClick={handleRandom}>Random</button> 
 
       </div>
    );

@@ -2,26 +2,29 @@ import SearchBar from "../searchBar/SearchBar"
 import { NavLink } from "react-router-dom"
 
 import styles from './Nav.module.css'
-import home from "../../Img/home.jpg"
+import navgif from '../../Img/sky.gif'
 
 export default function Nav({onSearch}){
     
     return(
         <div className={styles.backgroundhome} >
+            
             <div className={styles.searchBar}>  
+
                 <SearchBar onSearch={onSearch}/>
                 
-                <button>
-                    <NavLink to="/home">Home</NavLink>
+                <button className={styles.button}>
+                    <NavLink className={styles.navLink} to="/home">Home</NavLink>
+                </button>
+                
+                <button className={styles.button}>
+                    <NavLink className={styles.navLink} to="/favorites">Favorites</NavLink>
                 </button>
 
-                <button>
-                    <NavLink to="/about">About</NavLink>
+                <button className={styles.button}>
+                    <NavLink className={styles.navLink}to="/about">About</NavLink>
                 </button>
 
-                <button>
-                    <NavLink to="/favorites">Favorites</NavLink>
-                </button>
             
             </div>
         </div>

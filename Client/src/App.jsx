@@ -112,7 +112,7 @@ function App() {
 
 
    useEffect(() => {
-      !access && navigate('/home');/// ingreso con log
+      !access && navigate('/');/// ingreso con log
        // eslint-disable-next-line
    }, [access]);
 

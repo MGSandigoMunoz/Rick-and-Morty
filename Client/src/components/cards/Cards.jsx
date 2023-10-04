@@ -5,7 +5,7 @@ import imagenHome from '../../Img/gif_nave.gif'
 
 export default function Cards({characters,onClose}) {//characters es un arreglo con los personajes.La envía app
    return (
-   
+   <div className={styles.background}>
       <div className={styles.cardsContainer}> 
 
       <img src={imagenHome} alt='gif_nave' className={styles.gif_nave}/>
@@ -23,6 +23,7 @@ export default function Cards({characters,onClose}) {//characters es un arreglo 
          />
       ))}
       </div>
+   </div>
    );
 }
 

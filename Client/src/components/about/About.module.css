@@ -1,33 +1,56 @@
-
+.background{
+    
+    justify-content: center; /* Centra horizontalmente */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    position:absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 84%;
+    background-image: url("https://images.hdqwalls.com/wallpapers/rick-and-morty-hd-jh.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Para asegurarse de que la imagen de fondo cubra todo el contenedor */
+    background-attachment: fixed;
+    min-height: 642px;
+    opacity: 0.9;
+}
 
 
 .imagen {
     max-width: 40%; /* Asegura que la imagen no sea más ancha que el contenedor */
     height: auto; /* Mantiene la proporción de aspecto de la imagen */
-    width: 350px; /* Ancho fijo para el contenedor */
+    width: 275px; /* Ancho fijo para el contenedor */
     height: 250px; /* Altura fija para el contenedor */
-    
+    border-radius: 100%;
+    float: left;
+    margin-right: 100px;
   }
 
-.imagenContainer {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra */
-    border-radius: 100%; /* Hace que el contenedor de la imagen sea redondo */
-    overflow: hidden; /* Oculta cualquier parte de la imagen que esté fuera del contenedor */
-    justify-content: center; /* Centra la imagen horizontalmente dentro del contenedor */
-    align-items: center; /* Centra la imagen verticalmente dentro del contenedor */
+  .imagen:hover {
+    filter: grayscale(100%); 
+    transform: scaleX(-0.9) ;
   }
+
+
 
 .descripcion {
-  font-family: Arial, sans-serif; /* Cambia el tipo de letra */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: justify; /* Justifica el texto */
-  color: rgb(119, 15, 121); /* Cambia el color del texto a azul */
+  color: rgb(211, 136, 212); /* Cambia el color del texto a azul */
+  display: inline;
+  vertical-align: middle; 
+  font-size: 22px;
+  
 }
 
 .descripcionContainer {
-  
-  margin-left: 20px; /* Espacio entre la imagen y el texto */
-  background-color: #d37ea7b2; /* Fondo transparente */
-  padding: 10px; /* Espacio dentro del contenedor de texto */
+  margin:40px 50px 450px; /* Espacio entre la imagen y el texto */
+  background-color: #17021fb8; /* Fondo transparente */
+  border-radius: 4%;
+  padding: 50px;
+  align-items: center;
 }
 
 

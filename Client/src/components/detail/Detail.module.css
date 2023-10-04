@@ -1,19 +1,57 @@
-.card {
-    background-color: rgba(114, 92, 114, 0.8);
-    border: 1px solid #ddd;
+body {
+  margin: 0; 
+  padding: 0; 
+
+}
+
+.background {
+  background-image: url("https://wallpaperaccess.com/full/831749.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment:fixed;
+  top: 0;
+  left:0 ;
+  width: 100%;
+  height: 100%;
+  min-height: 636px;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+  .card {
+    background-color:#e162e687;
+    border: 2px solid #7ac8dfcb;
     border-radius: 10%;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-    font-family: "Calibri", sans-serif;
-    display:block
+    padding: 0px; /* Ajusta el espacio de relleno según tu contenido */
+    align-items: center;
+    text-align: left;
+    line-height: normal;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display:flow-root;
+    font-size: 20px;
+    color:#582c92;
+    
+  
+
+      box-shadow: rgb(18, 186, 215) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+     
+      
+  }
+
+  .img {
+    max-width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+    max-height: 100%; /* Asegura que la imagen se ajuste al contenedor */
+    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+    border-radius:100%;
+    float: right;
+    margin-right: 35%;
   }
  
 
   .descripcion {
-    font-family: Arial, sans-serif; /* Cambia el tipo de letra */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Cambia el tipo de letra */
     text-align:center; /* Justifica el texto */
-    color: rgb(214, 142, 189); /* Cambia el color del texto a azul */
+    color: rgb(17, 20, 52); /* Cambia el color del texto a azul */
   }
 
   .cardsContainer {

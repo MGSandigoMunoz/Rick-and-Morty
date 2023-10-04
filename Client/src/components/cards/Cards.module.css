@@ -6,25 +6,47 @@
     height: 100%; /* Establece la altura al 100% del viewport */
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente (cambia según tus necesidades) */
     z-index: 1000; /* Z-index para asegurarse de que esté por encima de otros elementos */ 
+     
 }
 
+body {
+  margin: 0; 
+  padding: 0; 
+
+}
+
+
+.background {
+  background-image: url("https://wallpaperaccess.com/full/831749.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 639px;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+/* Estilos para el contenedor de las tarjetas (Cards) */
 .cardsContainer {
-
   display: flex;
-  flex-wrap: wrap; /* Permite que las Cards se envuelvan automáticamente cuando no caben en el ancho del contenedor */
-  justify-content: flex-start; /* Alinea las Cards a la izquierda */
-  gap: 10px; /* Espacio entre las Cards (ajusta según sea necesario) */
-        position: static; /* Fija el contenedor en la ventana del navegador */
-        top: auto;
-        left: 0; /* Coloca el contenedor en la parte izquierda del viewport */
-        width: 100%; /* Establece el ancho al 100% del viewport */
-        height: 100%; /* Establece la altura al 100% del viewport */
-       
-      }
-.gif_nave{
-  width: 30%; /* Ancho de la imagen como el 50% del ancho del contenedor */
-  height: auto;
+  flex-wrap: wrap;
+  gap: 1px;
+  align-items: baseline;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  /* Agrega otros estilos específicos para tus tarjetas aquí */
 }
+
+
+.gif_nave{
+  width: 5%; 
+  height: auto;
+} 
       
 
 

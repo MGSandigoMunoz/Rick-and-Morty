@@ -70,9 +70,9 @@ export default function Form (props){
                     onChange={handleChange}
                     placeholder="Ingresa tu contraseña..."
                     />
-                    <p className="login-error" >{errors.email && errors.email}</p>
+                    {/* <p className="login-error" >{errors.email && errors.email}</p> */}
                     
-                    <p className="login-error" >{errors.password && errors.password}</p>
+                    {/* <p className="login-error" >{errors.password && errors.password}</p> */}
                     
                 <button 
                 type="submit"
